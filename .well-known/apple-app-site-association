@@ -3,12 +3,12 @@
     "apps": [],
     "details": [
       {
-        "appID": "PUAW7H3552.com.vincenzoracca.customerapp",
-        "paths": [ "/customer/*", "/reset-password" ]
+        "appID": "PUAW7H3552.com.vincenzoracca.zenbarber",
+        "paths": [ "/customer/*" ]
       },
       {
-        "appID": "PUAW7H3552.com.vincenzoracca.backofficeapp",
-        "paths": [ "/backoffice/*" ]
+        "appID": "PUAW7H3552.com.vincenzoracca.zenbarberstudio",
+        "paths": [ "/backoffice/*", "/reset-password" ]
       }
     ]
   }
