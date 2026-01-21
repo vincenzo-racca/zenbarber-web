@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appID": "PUAW7H3552.com.example.customerapp",
+        "appID": "PUAW7H3552.com.vincenzoracca.customerapp",
         "paths": [ "/customer/*", "/reset-password" ]
       },
       {
