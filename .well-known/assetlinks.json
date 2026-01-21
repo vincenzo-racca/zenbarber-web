@@ -1,0 +1,18 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.vincenzoracca.customerapp",
+      "sha256_cert_fingerprints": ["3F:74:06:DB:94:F1:4B:21:BD:31:D0:9F:E6:53:0D:E4:E0:51:8E:1B:3D:18:BD:10:69:1D:58:66:50:79:34:1F"]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.vincenzoracca.backofficeapp",
+      "sha256_cert_fingerprints": ["3F:74:06:DB:94:F1:4B:21:BD:31:D0:9F:E6:53:0D:E4:E0:51:8E:1B:3D:18:BD:10:69:1D:58:66:50:79:34:1F"]
+    }
+  }
+]

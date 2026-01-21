@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "PUAW7H3552.com.example.customerapp",
+        "paths": [ "/customer/*", "/reset-password" ]
+      },
+      {
+        "appID": "PUAW7H3552.com.vincenzoracca.backofficeapp",
+        "paths": [ "/backoffice/*" ]
+      }
+    ]
+  }
+}
