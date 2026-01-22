@@ -74,21 +74,47 @@
     </footer>
 
     <script>
-        // Questo script serve se un utente apre il link di reset password da PC.
-        // Se l'URL contiene "reset-password", mostriamo un messaggio specifico.
-        if (window.location.href.includes("reset-password")) {
-            const hero = document.querySelector('header');
-            hero.innerHTML = `
-                <div class="w-full text-center py-20">
-                    <h1 class="text-4xl font-bold mb-4">Reset Password Richiesto</h1>
-                    <p class="text-xl text-slate-600">Hai richiesto il reset della password.</p>
-                    <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mt-6 max-w-lg mx-auto" role="alert">
-                        <p class="font-bold">Apri questo link dal tuo smartphone</p>
-                        <p>Per completare la procedura e aprire l'app ZenBarber, apri l'email direttamente dal tuo telefono.</p>
-                    </div>
+    // Configurazione: Inserisci qui lo schema che hai messo nel Info.plist
+    const APP_SCHEME = "com.vincenzoracca.zenbarberstudio";
+
+    // Verifica se siamo in fase di reset password
+    if (window.location.href.includes("reset-password")) {
+        
+        // 1. Recupera i parametri dall'URL (il fragment #access_token=...)
+        const hash = window.location.hash; 
+        // Recupera anche eventuali query params (?code=...) se usi PKCE flow
+        const search = window.location.search;
+
+        // 2. Costruisci il Deep Link Custom
+        // Diventa: io.supabase.zenbarber://reset-password#access_token=...
+        const deepLink = `${APP_SCHEME}://reset-password${search}${hash}`;
+
+        // 3. Aggiorna la UI
+        const hero = document.querySelector('header');
+        hero.innerHTML = `
+            <div class="w-full text-center py-20 px-4">
+                <div class="mb-6 flex justify-center">
+                    <img src="assets/images/customer_icon.png" class="w-20 h-20 rounded-2xl shadow-lg">
                 </div>
-            `;
-        }
-    </script>
+                <h1 class="text-3xl font-bold mb-4 text-slate-900">Completa il Reset</h1>
+                <p class="text-lg text-slate-600 mb-8 max-w-md mx-auto">
+                    Per ragioni di sicurezza, iOS richiede una conferma manuale per aprire l'applicazione.
+                </p>
+                
+                <a href="${deepLink}" 
+                   class="bg-blue-600 text-white text-xl font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-blue-700 transition transform hover:scale-105 inline-block">
+                    Apri ZenBarber App
+                </a>
+
+                <p class="text-sm text-slate-400 mt-8">
+                    Se il bottone non funziona, assicurati di avere l'app installata.
+                </p>
+            </div>
+        `;
+
+        // 4. Tentativo di apertura automatica (Funziona su Android, a volte su iOS)
+        window.location.href = deepLink;
+    }
+</script>
 </body>
 </html>
