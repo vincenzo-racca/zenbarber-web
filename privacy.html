@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - ZenBarber</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Stili per la formattazione del testo della policy */
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #0f172a; }
+        .prose p { margin-bottom: 1rem; line-height: 1.7; color: #334155; }
+        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #334155; }
+        .prose li { margin-bottom: 0.5rem; }
+        .prose strong { color: #0f172a; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <nav class="container mx-auto p-6 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+            <img 
+                src="assets/images/customer_icon.png" 
+                alt="ZenBarber Logo" 
+                class="w-10 h-10 rounded-xl shadow-sm object-cover flex-shrink-0"
+            >
+            <span class="text-2xl font-bold text-slate-900">ZenBarber</span>
+        </a>
+        <a href="index.html" class="text-slate-600 hover:text-slate-900 font-medium">← Torna alla Home</a>
+    </nav>
+
+    <main class="flex-grow container mx-auto px-6 py-12 max-w-4xl">
+        <div class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100">
+            <h1 class="text-3xl md:text-4xl font-bold mb-2 text-slate-900">Informativa sulla Privacy</h1>
+            <p class="text-slate-500 mb-8">Ultimo aggiornamento: 24 Gennaio 2026</p>
+            
+            <div class="prose">
+                <p>La presente Informativa sulla privacy descrive come Zenbarber ("noi", "nostro") raccoglie, utilizza e protegge le informazioni degli utenti attraverso l'applicazione Zenbarber.</p>
+
+                <h2>1. Dati Raccolti</h2>
+                <p>Per fornire il servizio di prenotazione, raccogliamo le seguenti tipologie di dati:</p>
+                <ul>
+                    <li><strong>Informazioni di Profilo:</strong> Nome, cognome e indirizzo email forniti durante la registrazione o il login tramite provider terzi come Google, Apple o Facebook.</li>
+                    <li><strong>Dati di Prenotazione:</strong> Dettagli sugli appuntamenti, inclusi data, ora, tipo di servizio (taglio, barba), prezzo e barbiere selezionato.</li>
+                    <li><strong>Dati di Posizione:</strong> Se autorizzati, utilizziamo la posizione GPS del dispositivo esclusivamente per mostrare i saloni più vicini all'utente entro un raggio di 50km. Non conserviamo lo storico degli spostamenti.</li>
+                    <li><strong>Identificatori del Dispositivo:</strong> Raccogliamo il token univoco del dispositivo (FCM Token) per poter inviare notifiche push relative al servizio.</li>
+                </ul>
+
+                <h2>2. Finalità del Trattamento</h2>
+                <p>I dati vengono utilizzati esclusivamente per:</p>
+                <ul>
+                    <li>Gestire e confermare le prenotazioni degli appuntamenti.</li>
+                    <li>Autenticare l'utente in modo sicuro tramite Supabase Auth.</li>
+                    <li>Inviare notifiche push relative allo stato dell'appuntamento (es. conferme, cancellazioni o promemoria).</li>
+                </ul>
+
+                <h2>3. Servizi di Terze Parti</h2>
+                <p>L'app utilizza i seguenti servizi esterni che agiscono come responsabili del trattamento dei dati (Data Processors):</p>
+                <ul>
+                    <li><strong>Supabase:</strong> Per la gestione del database e dell'autenticazione sicura. I dati sono ospitati su server situati nell'Unione Europea (Germania).</li>
+                    <li><strong>Google, Apple & Facebook Login:</strong> Per facilitare l'accesso dell'utente. Accedendo tramite Social Login, raccogliamo l'email e le informazioni del profilo pubblico necessarie per creare l'account.</li>
+                    <li><strong>Firebase Cloud Messaging (Google):</strong> Utilizzato per l'infrastruttura di invio delle notifiche push. I token dei dispositivi e il contenuto delle notifiche transitano attraverso i server di Google per essere consegnati al dispositivo dell'utente.</li>
+                </ul>
+
+                <h2>4. Eliminazione dei Dati (Data Deletion)</h2>
+                <p>In conformità con le policy di Meta, Apple e il GDPR, gli utenti hanno il diritto di richiedere l'eliminazione dei propri dati in qualsiasi momento:</p>
+                <ul>
+                    <li><strong>Procedura In-App:</strong> È possibile richiedere la cancellazione dell'account direttamente dalle Impostazioni dell'applicazione tramite l'apposita voce "Elimina Account".</li>
+                    <li><strong>Procedura via Email:</strong> In alternativa, l'utente può inviare una richiesta all'indirizzo email <strong>vincenzo.racca22@gmail.com</strong>.</li>
+                    <li><strong>Cosa viene rimosso:</strong> Provvederemo alla cancellazione definitiva del profilo utente, dei token di notifica e all'anonimizzazione dello storico degli appuntamenti dai nostri database Supabase entro 30 giorni dalla richiesta.</li>
+                </ul>
+
+                <h2>5. Contatti</h2>
+                <p>Per qualsiasi domanda riguardante questa informativa, puoi contattarci a:<br>
+                <a href="mailto:vincenzo.racca22@gmail.com" class="text-blue-600 hover:underline">vincenzo.racca22@gmail.com</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center mt-12">
+        <div class="flex justify-center gap-6 mb-4 text-sm">
+            <a href="index.html" class="hover:text-white transition">Home</a>
+            <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+        </div>
+        <p>&copy; 2026 ZenBarber App. Tutti i diritti riservati.</p>
+    </footer>
+
+</body>
+</html>
