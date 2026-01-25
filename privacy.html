@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        /* Stili per la formattazione del testo della policy */
         .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #0f172a; }
+        .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #1e293b; }
         .prose p { margin-bottom: 1rem; line-height: 1.7; color: #334155; }
         .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #334155; }
         .prose li { margin-bottom: 0.5rem; }
@@ -63,12 +63,21 @@
                     <li><strong>Firebase Cloud Messaging (Google):</strong> Utilizzato per l'infrastruttura di invio delle notifiche push. I token dei dispositivi e il contenuto delle notifiche transitano attraverso i server di Google per essere consegnati al dispositivo dell'utente.</li>
                 </ul>
 
-                <h2>4. Eliminazione dei Dati (Data Deletion)</h2>
-                <p>In conformità con le policy di Meta, Apple e il GDPR, gli utenti hanno il diritto di richiedere l'eliminazione dei propri dati in qualsiasi momento:</p>
+                <h2>4. Eliminazione dei Dati e Conservazione</h2>
+                <p>In conformità con il GDPR, gli utenti hanno il diritto di richiedere l'eliminazione dei propri dati. Le modalità differiscono in base alla tipologia di utente:</p>
+
+                <h3>A. Per gli Utenti Clienti (App ZenBarber)</h3>
                 <ul>
-                    <li><strong>Procedura In-App:</strong> È possibile richiedere la cancellazione dell'account direttamente dalle Impostazioni dell'applicazione tramite l'apposita voce "Elimina Account".</li>
-                    <li><strong>Procedura via Email:</strong> In alternativa, l'utente può inviare una richiesta all'indirizzo email <strong>zenbarber.bounce425@passmail.net</strong>.</li>
-                    <li><strong>Cosa viene rimosso:</strong> Provvederemo alla cancellazione definitiva del profilo utente, dei token di notifica e all'anonimizzazione dello storico degli appuntamenti dai nostri database Supabase entro 30 giorni dalla richiesta.</li>
+                    <li><strong>Procedura:</strong> L'utente può eliminare il proprio account autonomamente tramite la funzione "Elimina Account" nelle Impostazioni dell'app.</li>
+                    <li><strong>Effetto Immediato:</strong> Alla conferma, il profilo dell'utente (Nome, Email) e i token di notifica vengono <strong>eliminati definitivamente</strong> dai nostri server.</li>
+                    <li><strong>Storico Appuntamenti:</strong> Per fini statistici aggregati del salone, lo storico degli appuntamenti viene mantenuto ma viene <strong>anonimizzato</strong> (il riferimento all'identità del cliente viene rimosso in modo irreversibile).</li>
+                </ul>
+
+                <h3>B. Per i Barbieri/Gestori (App ZenBarber Studio)</h3>
+                <ul>
+                    <li><strong>Procedura:</strong> La cancellazione può avvenire per richiesta volontaria del Titolare oppure <strong>d'ufficio in caso di mancato rinnovo dell'abbonamento</strong> (come dettagliato nei Termini di Servizio).</li>
+                    <li><strong>Periodo di Grazia (30 Giorni):</strong> In entrambi i casi, l'account viene posto in stato di disattivazione temporanea (Soft Delete) per 30 giorni prima della rimozione effettiva.</li>
+                    <li><strong>Cancellazione Definitiva:</strong> Scaduti i 30 giorni, l'account e tutti i dati associati verranno <strong>eliminati fisicamente</strong> in modo irreversibile dai nostri sistemi.</li>
                 </ul>
 
                 <h2>5. Contatti</h2>
@@ -82,6 +91,7 @@
         <div class="flex justify-center gap-6 mb-4 text-sm">
             <a href="index.html" class="hover:text-white transition">Home</a>
             <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+            <a href="terms.html" class="hover:text-white transition">Termini di Servizio</a>
         </div>
         <p>&copy; 2026 ZenBarber. Tutti i diritti riservati.</p>
     </footer>
