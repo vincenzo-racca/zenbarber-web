@@ -97,23 +97,25 @@
         // 3. Aggiorna la UI
         const hero = document.querySelector('header');
         hero.innerHTML = `
-            <div class="w-full text-center py-20 px-4">
-                <div class="mb-6 flex justify-center">
-                    <img src="assets/images/customer_icon.png" class="w-20 h-20 rounded-2xl shadow-lg">
-                </div>
-                <h1 class="text-3xl font-bold mb-4 text-slate-900">Completa il Reset</h1>
-                <p class="text-lg text-slate-600 mb-8 max-w-md mx-auto">
-                    Per ragioni di sicurezza, iOS richiede una conferma manuale per aprire l'applicazione.
-                </p>
-                
-                <a href="${deepLink}" 
-                   class="bg-blue-600 text-white text-xl font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-blue-700 transition transform hover:scale-105 inline-block">
-                    Apri ZenBarber
-                </a>
+            <div class="fixed inset-0 bg-slate-50 flex items-center justify-center z-50">
+                <div class="bg-white p-8 rounded-2xl shadow-xl text-center max-w-md w-full mx-4">
+                    <div class="mb-6 flex justify-center">
+                        <img src="assets/images/customer_icon.png" class="w-20 h-20 rounded-2xl shadow-lg">
+                    </div>
+                    <h1 class="text-2xl font-bold mb-2 text-slate-900">Reimposta Password</h1>
+                    <p class="text-slate-600 mb-8">
+                        Stiamo aprendo ZenBarber Studio per completare l'operazione...
+                    </p>
+                    
+                    <a href="${deepLink}" 
+                       class="block w-full bg-slate-900 text-white text-lg font-semibold px-6 py-4 rounded-xl shadow-lg hover:bg-slate-700 transition transform hover:scale-[1.02]">
+                        Apri App
+                    </a>
 
-                <p class="text-sm text-slate-400 mt-8">
-                    Se il bottone non funziona, assicurati di avere l'app installata.
-                </p>
+                    <p class="text-xs text-slate-400 mt-6">
+                        Se l'app non si apre automaticamente, clicca sul bottone.
+                    </p>
+                </div>
             </div>
         `;
 
